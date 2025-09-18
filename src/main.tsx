@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter basename='/workbook'>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/notes/*" element={<NoteView />} />
+        <Route path="/konspekt/*" element={<NoteView />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
