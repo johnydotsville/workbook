@@ -3,7 +3,13 @@ import { SourceCodeBox } from './SourceCodeBox';
 import rehypeRaw from 'rehype-raw';
 
 
-export const MarkdownBox = ({ content, basePath = '' }) => {
+interface MarkdownBoxProps {
+  content: string;
+  basePath: string;
+}
+
+
+export const MarkdownBox = ({ content, basePath = '' }: MarkdownBoxProps) => {
   // const urlTransform  = (src) => src.startsWith('/') ? src : `${basePath}/${src}`
 
   return (

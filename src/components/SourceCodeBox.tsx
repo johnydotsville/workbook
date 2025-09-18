@@ -4,7 +4,14 @@ import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 // import ClipboardIcon from '@mui/icons-material/FileCopy';
 
 
-export const SourceCodeBox = ({ sourceCode, style = dracula, language = "typescript", ...rest }) => {
+interface SourceCodeBoxProps {
+  sourceCode: any;
+  style?: any;
+  language?: string;
+}
+
+
+export const SourceCodeBox = ({ sourceCode, style = dracula, language = "typescript", ...rest }: SourceCodeBoxProps) => {
   return (
     <div>
       {/* <Button 
@@ -28,10 +35,10 @@ export const SourceCodeBox = ({ sourceCode, style = dracula, language = "typescr
 }
 
 
-async function handleCopyToClipboard(text: string) {
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch (err) {
-    alert('Ошибка копирования.');
-  }
-};
+// async function handleCopyToClipboard(text: string) {
+//   try {
+//     await navigator.clipboard.writeText(text);
+//   } catch (err) {
+//     alert('Ошибка копирования.');
+//   }
+// };

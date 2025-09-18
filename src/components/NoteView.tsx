@@ -6,20 +6,21 @@ import { useLocation } from "react-router-dom";
 export function NoteView() {
   const location = useLocation();
   
-  const [note, setNote] = useState('');
-  const [noteLoading, setNoteLoading] = useState(false);
-  const [noteLoadingError, setNoteLoadingError] = useState(null);
+  const [note, setNote] = useState<string>('');
+  const [noteLoading, setNoteLoading] = useState<boolean>(false);
+  const [noteLoadingError, setNoteLoadingError] = useState<string | null>(null);
 
   useEffect(() => {
     (async () => {
       const url = `${location.pathname}/index.md`;
+      console.log(url)
       setNoteLoading(true);
       try {
         const note = await fetch(url);
         const noteText = await note.text();
         setNote(noteText);
       } catch(error) {
-        setNoteLoadingError(error.message)
+        setNoteLoadingError((error as Error).message)
       } finally {
         setNoteLoading(false);
       }
@@ -31,7 +32,6 @@ export function NoteView() {
 
   return (
     <div>
-      {/* <MarkdownBox content={note} basePath={location.pathname.split('/').slice(0, -1).join('/')} /> */}
       <MarkdownBox content={note} basePath={location.pathname} />
     </div>
   )

@@ -1,17 +1,17 @@
 [
   {
     "topic": "React",
-    "path": "konspekt/react",
+    "path": "/konspekt/react",
     "subtopics": []
   },
   {
     "topic": "Flexbox",
-    "path": "konspekt/html-css/css/flexbox",
+    "path": "/konspekt/html-css/css/flexbox",
     "subtopics": []
   },
   {
     "topic": "Массивы",
-    "path": "konspekt/javascript/arrays",
+    "path": "/konspekt/javascript/arrays",
     "subtopics": []
   }
 ]
