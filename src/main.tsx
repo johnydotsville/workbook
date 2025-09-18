@@ -7,11 +7,12 @@ import { NoteView } from './components/NoteView'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <div>ХПД</div>
+    {/* <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/notes/*" element={<NoteView />} />
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
   </StrictMode>,
 )
