@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { MarkdownBox } from "./MarkdownBox";
 import { useLocation } from "react-router-dom";
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
 
 export function NoteView() {
