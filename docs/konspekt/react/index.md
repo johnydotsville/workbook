@@ -5,6 +5,7 @@
 ### Компоненты и данные
 
 - [Тестовая ссылка](#привет-мир)
+- [Ссылка на другой документ](https://johnydotsville.github.io/workbook/konspekt/javascript/arrays/index.md)
 
 #### Хранение данных компонента
 
