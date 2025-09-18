@@ -13,7 +13,7 @@ export function NoteView() {
 
   useEffect(() => {
     (async () => {
-      const url = `${location.pathname}/index.md`;
+      const url = `/workbook/${location.pathname}/index.md`;
       setNoteLoading(true);
       try {
         const note = await fetch(url);
