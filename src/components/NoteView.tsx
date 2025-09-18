@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 
 export function NoteView() {
   const location = useLocation();
+  const basePath = `/workbook/${location.pathname}`;
   
   const [note, setNote] = useState<string>('');
   const [noteLoading, setNoteLoading] = useState<boolean>(false);
@@ -13,7 +14,7 @@ export function NoteView() {
 
   useEffect(() => {
     (async () => {
-      const url = `/workbook/${location.pathname}/index.md`;
+      const url = `${basePath}/index.md`;
       setNoteLoading(true);
       try {
         const note = await fetch(url);
@@ -32,7 +33,7 @@ export function NoteView() {
 
   return (
     <div>
-      <MarkdownBox content={note} basePath={location.pathname} />
+      <MarkdownBox content={note} basePath={basePath} />
     </div>
   )
 }
