@@ -7,11 +7,25 @@ import { NoteView } from './components/NoteView'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/workbook'>
       <Routes>
-        <Route path="/workbook" element={<App />} />
-        <Route path="/workbook/notes/*" element={<NoteView />} />
+        <Route path="/" element={<App />} />
+        <Route path="/notes/*" element={<NoteView />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
 )
+
+
+// Вот так работает главная страница
+// createRoot(document.getElementById('root')!).render(
+//   <StrictMode>
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/workbook" element={<App />} />
+//         <Route path="/workbook/notes/*" element={<NoteView />} />
+//       </Routes>
+//     </BrowserRouter>
+//   </StrictMode>,
+// )
+
