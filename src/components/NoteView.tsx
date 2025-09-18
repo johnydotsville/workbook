@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 
 export function NoteView() {
-  // const location = useLocation();
+  const location = useLocation();
   
   // const [note, setNote] = useState<string>('');
   // const [noteLoading, setNoteLoading] = useState<boolean>(false);
@@ -34,7 +34,7 @@ export function NoteView() {
   return (
     <div>
       {/* <MarkdownBox content={note} basePath={location.pathname} /> */}
-      ПРЕВЕД, МЕДВЕД!
+      {location.pathname}
     </div>
   )
 }
