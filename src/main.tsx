@@ -7,10 +7,10 @@ import { NoteView } from './components/NoteView'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/workbook">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/konspekt/*" element={<NoteView />} />
+        <Route path="/notes/*" element={<NoteView />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
